@@ -1,6 +1,48 @@
-.body {
-    background-color: #F3F3F3;
+/* CAIXA DE ENTRADA CSS */
+.nickname {
+    background-color: #FFFFFF;
+    width: 100vh;
+    height: 100vh;
 }
+
+.nickname img {
+   padding-top: 72px;
+   padding-left: 122px;
+}
+
+.nome {
+    width: 261px;
+    height: 54px;
+    margin-top: 94px;
+    margin-left: 57px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+}
+
+::placeholder {
+    color: #AEAEAE;
+    text-align: center;
+}
+
+.nickname button {
+   width: 109px;
+   height: 45px;
+   margin-top: 15px;
+   margin-left: 133px;
+   border: 1px solid #E7E7E7;
+   border-radius: 9px;
+   color: #696969;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+}
+
+/* CSS CHAT  */
 
 .barra-topo {
 background-color: #FFFFFF;
@@ -56,4 +98,8 @@ align-items: center;
 .message ion-icon {
     width: 26px;
     height: 26px;
+}
+
+.hidden {
+    display: none;
 }
