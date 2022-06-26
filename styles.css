@@ -1,7 +1,12 @@
+body {
+   background-color: #F3F3F3;
+    height: 100vh;
+}
+
 /* CAIXA DE ENTRADA CSS */
 .nickname {
     background-color: #FFFFFF;
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -46,12 +51,15 @@
 
 .barra-topo {
 background-color: #FFFFFF;
-width: 100%;
+width: 100vw;
 height: 80px;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 display: flex;
 justify-content:space-around;
 align-items: center;
+position: fixed;
+top: 0;
+left: 0;
 }
 
 .barra-topo img {
@@ -64,14 +72,50 @@ align-items: center;
     height: 45px;
 }
 
-.container {
-    background-color: #F3F3F3;
+.mensagens {
+    width: 100vw;
     height: 100vh;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+}
+
+.publica {
+background-color: #FFFFFF;
+}
+
+.status {
+background-color: #DCDCDC;
+;
+}
+
+.privada {
+    background-color: #FFDEDE;
+
+}
+
+.texto {
+    height: 40px;
+    width: 100vw;
+    margin-top: 4px;
+    word-break: break-all;
+    border-radius: 2px;
+}
+
+.texto p {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 12px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+span {
+    color: gray;
 }
 
 .message {
     background-color: #FFFFFF;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -93,6 +137,11 @@ align-items: center;
     font-style: italic;
     font-size: 18px;
     border: 1px solid #FFFFFF;
+    outline: none;
+}
+
+.mensagem::placeholder {
+    color: #000000;
 }
 
 .message ion-icon {
@@ -100,6 +149,69 @@ align-items: center;
     height: 26px;
 }
 
+/* CSS Sidebar */
+ 
+.sidebar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.sidebar > div:nth-child(1){
+    background: rgba(0, 0, 0, 0.6);
+    width: 30%;
+    height: 100%;
+}
+
+.sidebar > div:nth-child(2){
+    background-color: #FFFFFF;
+    width: 70%;
+}
+
+.text {
+    width: 100%;
+    height: 84px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.online-people {
+    height: 50%;
+    overflow: scroll;
+    width: 100%;
+}
+
+h3 {
+    font-size: 16px;
+    overflow: hidden;
+    line-height: 19px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 7px;
+}
+
+.destino {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.sidebar ion-icon {
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.check {
+    color: green;
+}
 .hidden {
     display: none;
 }
